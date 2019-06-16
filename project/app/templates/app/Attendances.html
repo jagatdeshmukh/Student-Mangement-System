@@ -1,0 +1,40 @@
+{% extends "app/base.html" %}
+{% block body_block %}
+<div class="card-body">
+  <h2>Hi, thanks for login :{{ user.get_username }}</h2>
+</div>
+  {% if user.student %}
+<table class="table">
+  <thead class="thead-dark">
+    <th>Student</th>
+    <th>Date</th>
+    <th>Attendance</th>
+
+  </thead>
+  {% for Att in Attendances %}
+  <tr>
+    <td>{{ Att.student }}</td>
+    <td>{{ Att.date }}</td/>
+    <td>{{ Att.present }}</td>
+  </tr>
+    {% endfor %}
+</table>
+{% else %}
+<table class="table">
+  <thead class="thead-dark">
+    <th>Student</th>
+    <th>Date</th>
+    <th>Attendance</th>
+
+  </thead>
+  {% for Att in Attendances %}
+  <tr>
+    <td>{{ Att.student }}</td>
+    <td>{{ Att.date }}</td/>
+    <td>{{ Att.present }}</td>
+  </tr>
+    {% endfor %}
+</table>
+
+{% endif %}
+      {% endblock %}

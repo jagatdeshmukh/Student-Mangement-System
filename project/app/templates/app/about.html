@@ -1,0 +1,25 @@
+<title>About</title>
+{% extends "app/base.html" %}
+{% block body_block %}
+
+<body>
+  <div class="jumbotron" id="jum">
+    <h3>Login Entities</h3>
+  <ol>
+    <li>Student Login</li>
+    <li>Parent Login</li>
+    <li>Teacher/Admin Login</li>
+  </ol>
+  <h3>Other Entities</h3>
+  <ol>
+    <li>Student  Attendance - Every student will have attendance per day.</li>
+    <li>Departments - The institute has departments as in (Engineering, BSc, Pharma etc)</li>
+    <li>Courses - Departments will have multiple courses. (Engineering has courses like Computer Science, Electrical, IT etc)</li>
+    <li>Subjects - Courses will have multiple subjects.</li>
+    <li>Exams - We should be able to create an exam per course per subject.</li>
+    <li>Student Marks - For the Exams that are created, the enrolled course students should be given relatives marks by the teacher.</li>
+  </ol>
+  </div>
+        {% endblock %}
+
+</body>

@@ -1,0 +1,46 @@
+{% extends "app/base.html" %}
+{% block body_block %}
+<div class="card-body">
+  <h2>Hi, thanks for login :{{ user.get_username }}</h2>
+</div>
+  {% if user.student %}
+<table class="table">
+  <thead class="thead-dark">
+    <th>Student</th>
+    <th>Date</th>
+    <th>Subject Name</th>
+    <th>Marks</th>
+    <th>Out of</th>
+  </thead>
+  {% for Mrks in Marks %}
+  <tr>
+    <td>{{ Mrks.student }}</td>
+    <td>{{ Mrks.date }}</td/>
+    <td>{{ Mrks.subject }}</td>
+    <td>{{ Mrks.student_marks }}</td>
+    <td>{{ Mrks.out_off }}</td>
+  </tr>
+    {% endfor %}
+</table>
+{% else %}
+<table class="table">
+  <thead class="thead-dark">
+    <th>Student</th>
+    <th>Date</th>
+    <th>Subject Name</th>
+    <th>Marks</th>
+    <th>Out of</th>
+  </thead>
+  {% for Mrks in Marks_obt %}
+  <tr>
+    <td>{{ Mrks.student }}</td>
+    <td>{{ Mrks.date }}</td/>
+    <td>{{ Mrks.subject }}</td>
+    <td>{{ Mrks.student_marks }}</td>
+    <td>{{ Mrks.out_off }}</td>
+  </tr>
+  {% endfor %}
+</table>
+{% endif %}
+
+{% endblock %}

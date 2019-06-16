@@ -21,7 +21,3 @@ parent user1: karde
 
 password:karde@2000
 
-
-parent user2: khode
-
-password: khode@2000

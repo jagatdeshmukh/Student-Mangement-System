@@ -1,4 +1,4 @@
-# Student-Mangement-Syatem
+# Student-Mangement-System
 Student Management System using Django and MySQL
 
 

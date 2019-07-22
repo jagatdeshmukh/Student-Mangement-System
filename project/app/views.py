@@ -82,7 +82,7 @@ class StudentExamView(LoginRequiredMixin,ListView):
         queryset = queryset.filter(student_id=self.request.user)
         return queryset
 
-
+#  N Wok
 # def parent_detail(request, pk):
 #     parent = Parent.objects.get(parent_pk=pk)
 #

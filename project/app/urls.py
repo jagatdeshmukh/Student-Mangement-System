@@ -20,5 +20,5 @@ urlpatterns = [
     # path('Attendances/', views.student_attendance, name='Attendances'),
     # path('Marks/', views.ParentExamView.as_view(), name='Marks_obt'),
 ]
-# (?P<pk>\d+)/$
+# (?P<pk>\d+)/$   
 # student_view/Attendances/

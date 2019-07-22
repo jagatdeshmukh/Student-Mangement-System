@@ -7,6 +7,7 @@ admin.site.site_header = "School Management System"
 admin.site.site_title = "SMS teacher/Admin Portal"
 
 
+
 admin.site.register(Department)
 admin.site.register(Course)
 admin.site.register(Subject)

@@ -93,6 +93,9 @@ class Exam(models.Model):
     def __str__(self):
         return self.student.student.first_name + '' + self.student.student.last_name
 
+
+# have to create abstract user for parents_login
+
 # class Parent(models.Model):
 #     user = models.OneToOneField(User, on_delete=models.CASCADE, null=True)
 #     student = models.ForeignKey(Student, related_name='Parent', on_delete=models.CASCADE, null=True)

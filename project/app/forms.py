@@ -1,5 +1,5 @@
 from django import forms
-froms .models import Department, Course, subject, Exam, Student_Attendance,
+froms .models import Department, Course, subject, Exam, Student_Attendance
 from django.contrib.auth.models import User
 from django.forms import CharField
 

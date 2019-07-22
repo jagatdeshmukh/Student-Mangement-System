@@ -4,7 +4,7 @@ from django.shortcuts import get_object_or_404
 from datetime import datetime
 from django.shortcuts import redirect
 from django.contrib.auth.models import User, Group
-from .models import Department, Course, Student, Subject, Exam, Student_Attendance, Parent
+from .models import Department, Course, Student, Subject, Exam, Student_Attendance #, Parent
 from project import settings
 from django.contrib.auth.mixins import LoginRequiredMixin
 # from django.contrib.auth.forms import UserCreationForm
@@ -83,24 +83,24 @@ class StudentExamView(LoginRequiredMixin,ListView):
         return queryset
 
 
-def parent_detail(request, pk):
-    parent = Parent.objects.get(parent_pk=pk)
+# def parent_detail(request, pk):
+#     parent = Parent.objects.get(parent_pk=pk)
+#
+#     if request.user.is_authenticated:
+#         return render(
+#             request, 'student_view.html', {'parent': parent})
+#     else:
+#         return redirect('login')
 
-    if request.user.is_authenticated:
-        return render(
-            request, 'student_view.html', {'parent': parent})
-    else:
-        return redirect('login')
-
-class ParentExamView(LoginRequiredMixin,ListView):
-    model = Exam
-    template_name = 'app/Marks.html'
-    paginate_by = 10
-    context_object_name = 'Marks_obt'
-    def get_queryset(self):
-        queryset = super(ParentExamView, self).get_queryset()
-        queryset = queryset.filter(student_pk=self.request.user)
-        return queryset
+# class ParentExamView(LoginRequiredMixin,ListView):
+#     model = Exam
+#     template_name = 'app/Marks.html'
+#     paginate_by = 10
+#     context_object_name = 'Marks_obt'
+#     def get_queryset(self):
+#         queryset = super(ParentExamView, self).get_queryset()
+#         queryset = queryset.filter(student_pk=self.request.user)
+#         return queryset
 
 # class ParentExamView(LoginRequiredMixin,ListView):
 #     model = Exam

@@ -10,7 +10,7 @@ urlpatterns = [
     path('about/', views.about, name='about'),
     # path('student_login/', views.student_login, name='student_login'),
     # path('teacher_login/', views.teacher_login, name='teacher_login'),
-    path('parents_login/', views.parents_login, name='parents_login'),
+    # path('parents_login/', views.parents_login, name='parents_login'),
     path('student_view/', views.student_view, name='student_view'),
     # path('<int:pk>/',views.student_detail),
     # path('<int:pk>/',views.StudentAttendanceView.as_view(),name='Attendance'),
@@ -18,7 +18,7 @@ urlpatterns = [
     path('details/', views.student_view, name='details'),
     path('Marks/', views.StudentExamView.as_view(), name='Marks'),
     # path('Attendances/', views.student_attendance, name='Attendances'),
-    path('Marks/', views.ParentExamView.as_view(), name='Marks_obt'),
+    # path('Marks/', views.ParentExamView.as_view(), name='Marks_obt'),
 ]
 # (?P<pk>\d+)/$
 # student_view/Attendances/

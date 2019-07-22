@@ -93,22 +93,22 @@ class Exam(models.Model):
     def __str__(self):
         return self.student.student.first_name + '' + self.student.student.last_name
 
-class Parent(models.Model):
-    user = models.OneToOneField(User, on_delete=models.CASCADE, null=True)
-    student = models.ForeignKey(Student, related_name='Parent', on_delete=models.CASCADE, null=True)
-    first_name = models.CharField(max_length=100, null=True)
-    last_name = models.CharField(max_length=100, null=True)
-    email = models.EmailField(max_length=50, null=True)
+# class Parent(models.Model):
+#     user = models.OneToOneField(User, on_delete=models.CASCADE, null=True)
+#     student = models.ForeignKey(Student, related_name='Parent', on_delete=models.CASCADE, null=True)
+#     first_name = models.CharField(max_length=100, null=True)
+#     last_name = models.CharField(max_length=100, null=True)
+#     email = models.EmailField(max_length=50, null=True)
 
 
 
-    def __str__(self):
-        if self.first_name and not self.last_name:
-            return self.first_name
-        elif self.first_name and self.last_name:
-            return self.first_name + '' + self.last_name
-        else:
-            return 'Parent'
+    # def __str__(self):
+    #     if self.first_name and not self.last_name:
+    #         return self.first_name
+    #     elif self.first_name and self.last_name:
+    #         return self.first_name + '' + self.last_name
+    #     else:
+    #         return 'Parent'
 # def create_profile(sender,**kwargs):
 #     if kwargs['created']:
 #         parents = parents.object.create(user=kwargs['instance'])

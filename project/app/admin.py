@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Department,Course,Student,Subject,Exam,Student_Attendance,Parent
+from .models import Department,Course,Student,Subject,Exam,Student_Attendance #,Parent
 # from . import views
 # Register your models here.
 admin.site.index_title = "Welcome Teacher/Admin"
@@ -13,4 +13,4 @@ admin.site.register(Subject)
 admin.site.register(Student)
 admin.site.register(Student_Attendance)
 admin.site.register(Exam)
-admin.site.register(Parent)
+# admin.site.register(Parent)
